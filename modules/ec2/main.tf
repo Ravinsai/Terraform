@@ -1,5 +1,4 @@
 resource "aws_instance" "main" {
-    count = var.ec_cout
     instance_type = var.instance_type
     ami = var.ami
     subnet_id = var.subnet_id
@@ -7,14 +6,24 @@ resource "aws_instance" "main" {
     vpc_security_group_ids = [var.sg_id]
     key_name = var.key_name
 
+    
+
+
 
 
 
 
 
   tags = {
+    
     Name = "jenkinsagent"
+    Name = "jenkinsmaster"
+    name = "appserver"
   }
+
+  
+
+
 
 }  
 

@@ -16,12 +16,6 @@ variable "subnet_id" {
   
 }
 
-variable "ec_cout" {
-  
-  description = "number of instances to create"
-  default = 1
-}
-
 variable "sg_id" {
     description = "sg for creating ec2 instance"
     type = string
