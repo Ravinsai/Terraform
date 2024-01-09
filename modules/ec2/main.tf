@@ -14,15 +14,16 @@ resource "aws_instance" "main" {
 
 
 
-  tags = {
-    
+  tags = merge(
+    var.tags,
+
+  {
     Name = "jenkinsagent"
     Name = "jenkinsmaster"
-    name = "appserver"
-  }
-
+    Name = "ec2appserver"
   
-
+  },
+  )
 
 
 }  
@@ -32,4 +33,3 @@ resource "aws_instance" "main" {
   
   
  
-

@@ -27,3 +27,8 @@ variable "sg_id" {
 variable "key_name" {
     description = "key for creating ec2 instance"
 }
+
+variable "tags" {
+    description = "tags for ec2 instance"
+  
+}
